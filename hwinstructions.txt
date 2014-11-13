@@ -1,0 +1,43 @@
+3. Create a Business Website Using one of the free themes http://startbootstrap.com/template-overviews/small-business/ (Links to an external site.) or http://html5templatesdreamweaver.com/free-templates.html (Links to an external site.)
+
+Use the Laravel Framework to create the database and structure.
+
+Requirements:
+
+ 
+
+Contact Page
+
+This page will allow the user to send us an email. Use flash messages or separate pages to notify the user that their message was sent/or error messages.
+
+Home Page
+
+The home page will have a form that will allow the user to add their email address to the marketing email database.
+
+Have a confirmation page and/or flash message to let the user know we were able to successfully add their email address
+
+Services
+
+Purely informative, create at least 3 services and/or use Lorem Ipsum text as placeholders
+
+ 
+
+This is intentionally vague to allow for you to discover your own way to solve this problem.
+
+ 
+
+Pointers:
+
+You can create a controller per page or create one main controller with each page being a function of that controller.
+
+ 
+
+Rubric:
+
+What I'm looking for is the proper utilization of controllers, models, views and routes and to see how quickly you are able to grasp the concepts of MVC in a new framework.
+
+ 
+
+ 
+
+4. Write a blog entry on what you've learned this week and what you're looking forward to using BackboneJS front-end framework! 
