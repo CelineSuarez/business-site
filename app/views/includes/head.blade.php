@@ -1,4 +1,3 @@
-<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,11 +5,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Small Business - Start Bootstrap Template</title>
+    <title>Senzu Beans</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
-</head> 

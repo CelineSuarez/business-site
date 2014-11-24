@@ -8,13 +8,13 @@
         <!-- Heading Row -->
         <div class="row">
             <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
+                {{ HTML::image('Pictures/korinbeans.jpg', 'img', array('class' => 'img-responsive')) }}
             </div>
             <!-- /.col-md-8 -->
             <div class="col-md-4">
-                <h1>Business Name or Tagline</h1>
-                <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
+                <h1>McKorin Frozen Senzu Beans</h1>
+                <p>Senzu beans are the hottest craze for fighters everywhere, but now they're available worldwide!  Discover the power of these rejuvenating beans and find out why it's the hero's choice.</p>
+                <a class="btn btn-primary btn-lg" href="/services">Call to Action!</a>
             </div>
             <!-- /.col-md-4 -->
         </div>
@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="well text-center">
-                    This is a well that is a great spot for a business tagline or phone number for easy access!
+                    All the greatest warriors use it to save the Earth!  Whether you're an aspiring super Saiyan or a mom who needs more energy, Senzu beans are an absolute necessity!
                 </div>
             </div>
             <!-- /.col-lg-12 -->
