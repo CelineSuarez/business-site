@@ -36,12 +36,13 @@ Route::post('contact_request', function(){
 
 	$rules = array(
 		'name'             => 'required', 						// just a normal required validation
-		'email'            => 'required|email|unique:ducks', 	// required and must be unique in the ducks table
+		'email'            => 'required|email|unique:subscribed', 	// required and must be unique in the ducks table
 		'comments'         => 'required'
+	);
 
 		// do the validation ----------------------------------
 	// validate against the inputs from our form
-	$validator = Validator::make(Input::all(), $rules);
+	$validator = Validator::make(Input::all(), Contact::$rules);
 
 	// check if the validator failed -----------------------
 	if ($validator->fails()) {
@@ -53,7 +54,8 @@ Route::post('contact_request', function(){
 		return Redirect::to('contact')
 			->withErrors($validator);
 
-		} else {
+		} 
+		else {
 		// validation successful ---------------------------
 
 		// our duck has passed all tests!
@@ -61,9 +63,9 @@ Route::post('contact_request', function(){
 
 		// create the data for our duck
 		$contact = new Contact;
-		$duck->name     = Input::get('name');
-		$duck->email    = Input::get('email');
-		$duck->password = Input::get('comments'));
+		$contact->name     = Input::get('name');
+		$contact->email    = Input::get('email');
+		$contact->comments = Input::get('comments');
 
 		// save our duck
 		$contact->save();

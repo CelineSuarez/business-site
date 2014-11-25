@@ -17,7 +17,7 @@
 		</div>	
 
 		<!-- FORM STARTS HERE -->
-		<form method="POST" action="/contact_request" novalidate>
+		<form method="POST" action="/contact" novalidate>
 
 			<div class="form-group">
 				<label for="name">Name</label>

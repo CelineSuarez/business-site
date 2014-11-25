@@ -25,3 +25,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password', 'remember_token');
 
 }
+
+class Contact extends Eloquent {
+
+	protected $fillable = array('name', 'email', 'comments');
+
+	public static $rules = array(
+		'name'             => 'required', 						// just a normal required validation
+		'email'            => 'required|email|unique:subscribed', 	// required and must be unique in the ducks table
+		'comments' 		   => 'required',        // required and has to match the password field
+	);
+
+}

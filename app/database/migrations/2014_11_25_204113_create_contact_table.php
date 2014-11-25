@@ -3,23 +3,22 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubscribedTable extends Migration {
+class CreateContactTable extends Migration {
 
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
-
-	//may need to add another table solely for the contact form
 	public function up()
 	{
-		Schema::create('subscribed', function(Blueprint $table)
+		Schema::create('contact', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string("name", 255);
+			$table->string('email', 255);
+			$table->string('comments', 255);
 			$table->timestamps();
-			$table->string('email');
-
 		});
 	}
 
@@ -30,7 +29,7 @@ class CreateSubscribedTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('subscribed');
+		Schema::drop('contact');
 	}
 
 }
