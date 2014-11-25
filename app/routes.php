@@ -30,3 +30,50 @@ Route::get('contact', function()
 {
 	return View::make('pages.contact');
 });
+
+// route to process the contact us form
+Route::post('contact_request', function(){
+
+	$rules = array(
+		'name'             => 'required', 						// just a normal required validation
+		'email'            => 'required|email|unique:ducks', 	// required and must be unique in the ducks table
+		'comments'         => 'required'
+
+		// do the validation ----------------------------------
+	// validate against the inputs from our form
+	$validator = Validator::make(Input::all(), $rules);
+
+	// check if the validator failed -----------------------
+	if ($validator->fails()) {
+
+		// get the error messages from the validator
+		$messages = $validator->messages();
+
+		// redirect our user back to the form with the errors from the validator
+		return Redirect::to('contact')
+			->withErrors($validator);
+
+		} else {
+		// validation successful ---------------------------
+
+		// our duck has passed all tests!
+		// let him enter the database
+
+		// create the data for our duck
+		$contact = new Contact;
+		$duck->name     = Input::get('name');
+		$duck->email    = Input::get('email');
+		$duck->password = Input::get('comments'));
+
+		// save our duck
+		$contact->save();
+		return Redirect::to('contact');
+
+	}
+
+
+});
+
+
+
+

@@ -14,7 +14,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'subscribed';
+	protected $fillable = array('name', 'email', 'comments');
 
 	/**
 	 * The attributes excluded from the model's JSON form.

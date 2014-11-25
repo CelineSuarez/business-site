@@ -5,9 +5,8 @@
 </head>
 <body>
 
-	<header class="row">
 		@include('includes.header')
-	</header>
+	
 
 	<div class="container">
 
