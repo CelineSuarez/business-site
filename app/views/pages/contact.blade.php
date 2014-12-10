@@ -17,7 +17,7 @@
 		</div>	
 
 		<!-- FORM STARTS HERE -->
-		<form method="POST" action="/contact" novalidate>
+		<form method="POST" action="/contact" >
 
 			<div class="form-group">
 				<label for="name">Name</label>
@@ -35,7 +35,7 @@
 			</div>
 
 			
-			<button type="submit" class="btn btn-success">Send</button>
+			<input type="submit" class="btn btn-success" value="Submit">
 
 		</form>
 

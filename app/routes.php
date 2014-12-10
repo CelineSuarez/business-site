@@ -32,7 +32,7 @@ Route::get('contact', function()
 });
 
 // route to process the contact us form
-Route::post('contact_request', function(){
+Route::post('contact', function(){
 
 	$rules = array(
 		'name'             => 'required', 						// just a normal required validation
@@ -56,22 +56,16 @@ Route::post('contact_request', function(){
 
 		} 
 		else {
+
 		// validation successful ---------------------------
+			Mail::send('pages.email', array($rules), function($message)
+			{
+			    $message->to('foo@example.com', 'John Smith')->subject('Welcome!');
+			});
+		}	
+	
 
-		// our duck has passed all tests!
-		// let him enter the database
-
-		// create the data for our duck
-		$contact = new Contact;
-		$contact->name     = Input::get('name');
-		$contact->email    = Input::get('email');
-		$contact->comments = Input::get('comments');
-
-		// save our duck
-		$contact->save();
-		return Redirect::to('contact');
-
-	}
+	
 
 
 });
